@@ -61,7 +61,7 @@ export const getTransactions = async (req, res) => {
       name: { $regex: search, $options: "i" },
     });
 
-    res.status(200).json(transaction, total);
+    res.status(200).json({ transaction, total });
   } catch (error) {
     res.status(404).json({ message: error.message });
   }

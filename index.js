@@ -9,7 +9,7 @@ import clientRoutes from "./routes/client.js";
 import generalRoutes from "./routes/general.js";
 import managmetRoutes from "./routes/managment.js";
 import salesRoutes from "./routes/sales.js";
-import OveralStats from "./models/OveralStat.js";
+import OverallStat from "./models/OverallStat.js";
 
 //data imports
 //import User from "./models/User.js";
@@ -58,6 +58,6 @@ mongoose
     //Product.insertMany(dataProduct);
     //ProductStat.insertMany(dataProductStat);
     //Transaction.insertMany(dataTransaction);
-    //OveralStats.insertMany(dataOverallStat);
+    //OverallStat.insertMany(dataOverallStat);
   })
   .catch((err) => console.log(`${err} did not connect`));

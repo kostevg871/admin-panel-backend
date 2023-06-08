@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 
-const OveralStatsSchema = new mongoose.Schema(
+const OverallStatSchema = new mongoose.Schema(
   {
     totalCustomers: Number,
     yearlySalesTotal: Number,
@@ -13,11 +13,13 @@ const OveralStatsSchema = new mongoose.Schema(
         totalUnits: Number,
       },
     ],
-    dailyData: {
-      date: String,
-      totalSale: Number,
-      totalUnits: Number,
-    },
+    dailyData: [
+      {
+        date: String,
+        totalSales: Number,
+        totalUnits: Number,
+      },
+    ],
     salesByCategory: {
       type: Map,
       of: Number,
@@ -26,5 +28,5 @@ const OveralStatsSchema = new mongoose.Schema(
   { timestamps: true }
 );
 
-const OveralStats = mongoose.model("OveralStats", OveralStatsSchema);
-export default OveralStats;
+const OverallStat = mongoose.model("OverallStat", OverallStatSchema);
+export default OverallStat;

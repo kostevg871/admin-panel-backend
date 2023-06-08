@@ -1,8 +1,8 @@
-import OveralStats from "../models/OveralStat.js";
+import OverallStats from "../models/OverallStat.js";
 
 export const getSales = async (req, res) => {
   try {
-    const overallStats = await OveralStats.find();
+    const overallStats = await OverallStats.find();
 
     res.status(200).json(overallStats[0]);
   } catch (error) {

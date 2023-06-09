@@ -10,6 +10,7 @@ import generalRoutes from "./routes/general.js";
 import managmetRoutes from "./routes/managment.js";
 import salesRoutes from "./routes/sales.js";
 import OverallStat from "./models/OverallStat.js";
+import AffiliateStat from "./models/AffiliateStat.js";
 
 //data imports
 //import User from "./models/User.js";
@@ -20,6 +21,7 @@ import {
   dataProductStat,
   dataTransaction,
   dataOverallStat,
+  dataAffiliateStat,
 } from "./data/index.js";
 
 //import Product from "./models/Product.js";
@@ -54,6 +56,7 @@ mongoose
   .then(() => {
     app.listen(PORT, () => console.log(`Server Port: ${PORT}`));
     /* Добавляем User один раз*/
+    //AffiliateStat.insertMany(dataAffiliateStat);
     //User.insertMany(dataUser);
     //Product.insertMany(dataProduct);
     //ProductStat.insertMany(dataProductStat);
